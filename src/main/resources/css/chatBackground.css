@@ -1,0 +1,5 @@
+#hbox {
+    -fx-background-color: linear-gradient(to right, #8A2BE2, #66CDAA);
+    -fx-pref-height: 800px;
+    -fx-pref-width: 1000px;
+}

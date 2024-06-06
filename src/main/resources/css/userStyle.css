@@ -1,0 +1,4 @@
+#hbox {
+    -fx-background-radius: 10px; /* Ajusta el radio según sea necesario */
+    -fx-background-color: linear-gradient(to right, #8A2BE2, #66CDAA); /* Color de fondo del HBox */
+}

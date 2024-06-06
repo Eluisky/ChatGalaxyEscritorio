@@ -1,0 +1,5 @@
+.textfield {
+    -fx-background-radius: 15;
+    -fx-max-width: 350px;
+    -fx-max-height: 30px;
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="background" alignment="CENTER" minHeight="600.0" minWidth="800.0" spacing="12.0" stylesheets="@../../../css/loginBackground.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ielena.chat.ChatApplication">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="350.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../Images/welcome.jpg" />
+                     </image></ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" spacing="12.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                     <image>
+                        <Image url="@../../../Images/chatlogo.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin></ImageView>
+                  <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="¡Bienvenido de nuevo!" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Inicia sesión en tu cuenta" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <Separator VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets left="12.0" right="12.0" />
+                     </VBox.margin></Separator>
+                  <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Nombre, correo o número de teléfono" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <TextField fx:id="emailOrPhoneNumberOrUsername" minHeight="30.0" minWidth="350.0" onAction="#checkLogin" promptText="Nombre, correo o teléfono" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></TextField>
+                  <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Contraseña" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></Label>
+                  <PasswordField fx:id="loginPassword" accessibleRole="PASSWORD_FIELD" minHeight="30.0" minWidth="350.0" onAction="#checkLogin" promptText="contraseña" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></PasswordField>
+                  <HBox alignment="CENTER" fillHeight="false" VBox.vgrow="ALWAYS">
+                     <children>
+                        <CheckBox fx:id="rememberMe" mnemonicParsing="false" stylesheets="@../../../css/textStyle.css" text="Recúerdame" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></CheckBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="signIn" mnemonicParsing="false" onAction="#checkLogin" stylesheets="@../../../css/buttonStyle.css" text="Iniciar sesión" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button mnemonicParsing="false" onAction="#launchRegister" stylesheets="@../../../css/buttonStyle.css" text="Regístrate" VBox.vgrow="ALWAYS">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="12.0" right="12.0" />
+         </VBox.margin></Separator>
+      <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Copyright" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

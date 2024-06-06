@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox id="background" alignment="CENTER" spacing="12.0" stylesheets="@../../../css/loginBackground.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ielena.chat.ChatApplication">
+    <children>
+      <HBox>
+         <children>
+            <Button mnemonicParsing="false" onAction="#returnToLogin" style="-fx-background-color: transparent;">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="30" />
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="100.0" />
+         </padding>
+      </HBox>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                <image>
+                    <Image url="@../../../Images/chatlogo.png" />
+                </image>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </ImageView>
+            <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="¡Regístrate con nosotros!" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </Label>
+            <Separator VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </Separator>
+        <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Nombre de usuario*" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="username" minHeight="30.0" minWidth="350.0" onAction="#register" promptText="Nombre de usuario" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TextField>
+            <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Correo *" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </Label>
+            <TextField fx:id="mail" minHeight="30.0" minWidth="350.0" onAction="#register" promptText="Correo" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </TextField>
+        <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Teléfono *" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Label>
+        <TextField fx:id="telephone" minHeight="30.0" minWidth="350.0" onAction="#register" promptText="Teléfono" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </TextField>
+            <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Contraseña*" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </Label>
+            <PasswordField fx:id="password" minHeight="30.0" minWidth="350.0" onAction="#register" promptText="Contraseña" styleClass="textfield" stylesheets="@../../../css/textFieldStyle.css" VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+      </PasswordField>
+            <Button mnemonicParsing="false" onAction="#register" stylesheets="@../../../css/buttonStyle.css" text="Regístrate" VBox.vgrow="ALWAYS">
+                <opaqueInsets>
+                    <Insets />
+                </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+            </Button>
+        <Separator VBox.vgrow="ALWAYS">
+         <VBox.margin>
+            <Insets left="12.0" right="12.0" />
+         </VBox.margin></Separator>
+        <Label styleClass="text" stylesheets="@../../../css/textStyle.css" text="Copyright" VBox.vgrow="ALWAYS" />
+    </children>
+</VBox>

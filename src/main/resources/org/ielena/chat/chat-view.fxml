@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox id="hbox" spacing="12.0" stylesheets="@../../../css/chatBackground.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ielena.chat.ChatApplication">
+   <children>
+      <VBox fx:id="chatSide" fillWidth="false" minWidth="315.0" spacing="12.0" style="-fx-background-color: transparent;">
+         <children>
+            <TextField fx:id="searchContact" minWidth="315.0" onAction="#searchUser" promptText="pulse enter con el campo vacío para ver todos sus chats">
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin></TextField>
+            <ScrollPane fx:id="scrollChats" hbarPolicy="NEVER" minHeight="0.0" minWidth="0.0" prefWidth="315.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS">
+              <content>
+                <AnchorPane style="-fx-background-color: transparent;">
+                     <children>
+                        <VBox fx:id="chats" fillWidth="false" minWidth="0.0" pickOnBounds="false" style="-fx-background-color: transparent;">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children></VBox>
+      <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <HBox minHeight="50.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="nameLoggedUser" text="nombre usuario" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="userImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" spacing="30.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="changeProfileImage" mnemonicParsing="false" onAction="#selectImageProfile" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Cambiar imagen de perfil" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="IMAGE" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button mnemonicParsing="false" onAction="#addUserView" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Añadir usuario" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="PLUS" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#addGroupView" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Crear grupo" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#deleteContactOrGroupView" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Borrar contacto o grupo" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER_TIMES" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button mnemonicParsing="false" onAction="#deleteAccountView" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Eliminar cuenta" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="BAN" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button mnemonicParsing="false" onAction="#signOff" style="-fx-background-color: transparent;">
+                           <tooltip><Tooltip text="Cerrar sesión" /></tooltip>
+                           <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="20" />
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </HBox>
+               </children>
+            </HBox>
+            <ListView fx:id="chatView" opacity="0.99" pickOnBounds="false" stylesheets="@../../../css/listView.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></ListView>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <TextField id="list-view" fx:id="writeMessageField" onAction="#writeMessage" promptText="Escriba un mensaje...." HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="sendMessage" mnemonicParsing="false" onAction="#writeMessage" stylesheets="@../../../css/buttonStyle.css">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEND" />
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin></VBox>
+   </children>
+   <padding>
+      <Insets bottom="12.0" right="12.0" top="12.0" />
+   </padding>
+</HBox>
