@@ -2,7 +2,7 @@ package org.ielena.chat;
 
 import Objects.Contact;
 import Objects.Message;
-import Objects.User;
+import Server.User;
 import Server.DatabaseManager;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;

@@ -1,4 +1,4 @@
-package Objects;
+package Server;
 
 import javafx.application.Platform;
 import javafx.scene.media.AudioClip;
